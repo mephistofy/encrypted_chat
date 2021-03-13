@@ -1,0 +1,17 @@
+<li>
+      <div class="list-group-item">
+    <% if user.id == message.user.id%>
+        <div class=" text-right">
+          <%= message.body %>
+          
+        </div>
+
+    <%else%>
+
+        <div class="text-right">          
+          <%= message.body %>
+
+      </div>
+    <%end%>
+            </div>
+</li>

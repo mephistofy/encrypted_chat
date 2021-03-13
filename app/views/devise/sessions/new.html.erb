@@ -1,0 +1,30 @@
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                  <div class ="form-group">
+                  <h3>Login</h3>
+                          <hr />
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email, 'Email address' %><br />
+            <%= f.email_field :email, autofocus: true, class:"form-control form-control-lg" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password, 'Password'  %><br />
+            <%= f.password_field :password,class:"form-control form-control-lg" %>
+          </div>
+        <hr />
+          <div class="actions">
+            <%= f.submit "Log in", class:"btn bg-dark text-white btn-lg btn-block" %>
+          </div>
+        <% end %>
+        <hr />
+        <%= render "devise/shared/links" %>
+      </div>
+        </div>
+    </div>
+</div>
+
+
+
